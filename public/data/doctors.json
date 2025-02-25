@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Dr. Alejandro Ruiz",
+    "specialty": "Cardiología",
+    "description": "Especialista en enfermedades del corazón, con amplia experiencia en diagnóstico y tratamiento de arritmias y insuficiencia cardíaca. Reconocido por su enfoque humano y personalizado en cada paciente.",
+    "services": [
+      "Ecocardiogramas",
+      "Holter",
+      "Cateterismo cardíaco",
+      "Consulta especializada"
+    ],
+    "years": 15
+  },
+  {
+    "name": "Dra. María Fernanda López",
+    "specialty": "Pediatría",
+    "description": "Pediatra apasionada por el bienestar infantil, con amplia experiencia en el cuidado de niños desde recién nacidos hasta adolescentes. Especializada en el desarrollo infantil y enfermedades comunes de la infancia.",
+    "services": [
+      "Vacunación",
+      "Control de crecimiento y desarrollo",
+      "Atención de urgencias pediátricas"
+    ],
+    "years": 10
+  },
+  {
+    "name": "Dr. Carlos Sánchez",
+    "specialty": "Neurología",
+    "description": "Neurólogo especializado en trastornos del movimiento y enfermedades neurodegenerativas. Cuenta con una amplia experiencia en el diagnóstico y tratamiento de enfermedades como el Parkinson y la esclerosis múltiple.",
+    "services": [
+      "Electroencefalograma (EEG)",
+      "Resonancia magnética",
+      "Consulta especializada"
+    ],
+    "years": 12
+  },
+  {
+    "name": "Dra. Ana García",
+    "specialty": "Ginecología y Obstetricia",
+    "description": "Ginecobstetra con amplia experiencia en el embarazo, parto y atención postparto. Especializada en tratamientos de infertilidad y menopausia.",
+    "services": [
+      "Ecografías obstétricas",
+      "Control prenatal",
+      "Parto natural y cesárea"
+    ],
+    "years": 8
+  },
+  {
+    "name": "Dr. David Martínez",
+    "specialty": "Ortopedia",
+    "description": "Ortopedista especializado en cirugía de rodilla y hombro. Cuenta con amplia experiencia en el tratamiento de lesiones deportivas y artrosis.",
+    "services": [
+      "Artroscopía",
+      "Prótesis de rodilla y hombro",
+      "Tratamiento de fracturas"
+    ],
+    "years": 18
+  },
+  {
+    "name": "Dra. Sofía Ramírez",
+    "specialty": "Oftalmología",
+    "description": "Oftalmóloga especializada en cirugía refractiva y enfermedades de la retina. Cuenta con amplia experiencia en el tratamiento de cataratas y glaucoma.",
+    "services": [
+      "Examen de la vista",
+      "Láser para miopía, hipermetropía y astigmatismo",
+      "Tratamiento de glaucoma"
+    ],
+    "years": 14
+  }
+]

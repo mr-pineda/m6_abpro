@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+	<title>image</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(211.112,-211.112,211.112,211.112,3.944,215.056)">
+			<stop offset=".02" stop-color="#00939e"/>
+			<stop offset=".979" stop-color="#d4feff"/>
+			<stop offset="1" stop-color="#d4feff"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: #ffffff } 
+	</style>
+	<path id="Forma 1" class="s0" d="m123.6 9.8l85.6 85.6c7.8 7.8 7.8 20.4 0 28.2l-85.6 85.6c-7.8 7.8-20.4 7.8-28.2 0l-85.6-85.6c-7.8-7.8-7.8-20.4 0-28.2l85.6-85.6c7.8-7.8 20.4-7.8 28.2 0z"/>
+	<path id="Forma 3" class="s1" d="m38.9 120v-20h141.2v20zm26.1-64h20v107.8h-20zm67 0h20v107.8h-20z"/>
+</svg>
