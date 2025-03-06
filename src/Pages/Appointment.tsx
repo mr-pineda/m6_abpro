@@ -57,7 +57,8 @@ const Appointment = () => {
   const dayInputRef = useRef<HTMLInputElement>(null);
 
   const getLocation = () => {
-    if ("geolocation" in navigator) {
+  /*  if ("geolocation" in navigator)*/
+  if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
         setLocation({
           lat: position.coords.latitude,
@@ -194,6 +195,19 @@ const Appointment = () => {
         </p>
         {location !== null && (<a href={`https://www.google.com/maps/@-${location.lat},${location.lon},15z`} target='_blank'>Ver tu ubicación</a>)}
       </div>
+
+      <button
+      className='rounded-lg bg-sky-700 p-3 font-bold text-white'
+      onClick={() => {
+           if (location !== null) {
+            window.open(`https://www.google.com/maps/@${location.lat},${location.lon},15z`, '_blank');
+          }
+        }
+      }
+      > Ver tu ubicación</button>
+
+
+
       <div className='w-full bg-white px-28 py-16'>
         <div className='w-full bg-white px-28 py-16'>
           <div className='mb-5'>
@@ -367,10 +381,13 @@ const Appointment = () => {
           >
             Agendar Hora
           </button>
+     
         </div>
       </div>
+  
     </>
-  );
-};
 
-export default Appointment;
+          );
+        }
+
+export default Appointment; 
