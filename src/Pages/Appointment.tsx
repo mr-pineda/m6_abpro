@@ -49,11 +49,31 @@ const Appointment = () => {
   const [serviceHover, setServiceHover] = useState(false);
   const [hourHover, setHourHover] = useState(false);
   const [dayHover, setDayHover] = useState(false);
+  const [location,setLocation] = useState<{lat:number,lon:number}|null>(null)
 
   const doctorInputRef = useRef<HTMLInputElement>(null);
   const serviceInputRef = useRef<HTMLInputElement>(null);
   const hourInputRef = useRef<HTMLInputElement>(null);
   const dayInputRef = useRef<HTMLInputElement>(null);
+
+  const getLocation = () => {
+  /*  if ("geolocation" in navigator)*/
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setLocation({
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        });
+      },
+      (error) => {
+        console.log("Error obteniendo la ubicación:",
+        error);
+      }
+      );
+    } else {
+      console.log("Geolocalización no soportada en este navegador.");
+    }
+  };
 
   useEffect(() => {
     if (doctorsData.length === 0) return; //Si no hay datos, no hace nada
@@ -61,6 +81,9 @@ const Appointment = () => {
   }, [doctorsData]); // El userEffect se ejecuta cuando se actualiza doctorsData
 
   useEffect(() => {
+
+    getLocation();
+
     doctorInputRef.current?.focus();
     doctorInputRef.current?.addEventListener('mouseenter', () => {
       setDoctorHover(true);
@@ -170,7 +193,21 @@ const Appointment = () => {
           fugit facilis in nesciunt? Velit voluptate optio, rerum quae ratione
           est. Illum, natus!
         </p>
+        {location !== null && (<a href={`https://www.google.com/maps/@-${location.lat},${location.lon},15z`} target='_blank'>Ver tu ubicación</a>)}
       </div>
+
+      <button
+      className='rounded-lg bg-sky-700 p-3 font-bold text-white'
+      onClick={() => {
+           if (location !== null) {
+            window.open(`https://www.google.com/maps/@${location.lat},${location.lon},15z`, '_blank');
+          }
+        }
+      }
+      > Ver tu ubicación</button>
+
+
+
       <div className='w-full bg-white px-28 py-16'>
         <div className='w-full bg-white px-28 py-16'>
           <div className='mb-5'>
@@ -344,10 +381,13 @@ const Appointment = () => {
           >
             Agendar Hora
           </button>
+     
         </div>
       </div>
+  
     </>
-  );
-};
 
-export default Appointment;
+          );
+        }
+
+export default Appointment; 
