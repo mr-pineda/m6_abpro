@@ -12,9 +12,11 @@ export const useDoctors = () => {
     const fetchDoctors = async () => {
       try {
         const cache = await caches.open('pwa-cache-v1');
-        console.log('cache keys: ', await cache.keys());
+        // console.log('cache keys: ', await cache.keys());
         const cachedResponse = await cache.match('/data/doctors.json');
-        // console.log('cached response:', cachedResponse);
+        const fakeCache = await cache.match('/cahche_que_no_existe.json');
+        console.log('cached response:', cachedResponse);
+        console.log('fake cached response:', fakeCache);
 
         if (cachedResponse) {
           const data = await cachedResponse.json();
