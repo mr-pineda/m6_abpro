@@ -8,9 +8,7 @@ const Header = () => {
     { name: SCREENS.HOME, url: '/' },
     { name: SCREENS.ABOUT, url: '/about' },
     { name: SCREENS.CONTACT, url: '/contact' },
-    { name: SCREENS.LOGIN, url: '/login' },
   ];
-  let loggedIn = false;
 
   return (
     <header className='h-15 flex flex-row justify-between bg-sky-500 px-2'>
@@ -28,14 +26,6 @@ const Header = () => {
             <p
               className='cursor-pointer'
               onClick={() => {
-                if (name === SCREENS.LOGIN) {
-                  loggedIn = localStorage.getItem('authToken') !== null;
-                  console.log('loggedIn', loggedIn);
-                  if (loggedIn) {
-                    navigate('/dashboard');
-                    return;
-                  }
-                }
                 navigate(url);
               }}
               // to={loggedIn ? "/dashboard" : url}
