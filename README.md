@@ -1,5 +1,4 @@
-# Pagina demo de Hospital Nacional
-
+# Pagina demo de Hospital Sin Nombre
 ## Contexto
 
 En este proyecto, los estudiantes deberán implementar el consumo de una API para obtener y mostrar datos del sistema del hospital, como la información de doctores o servicios médicos.
