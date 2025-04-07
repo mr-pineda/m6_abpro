@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router';
 const Header = () => {
   const navigate = useNavigate();
   const sectionList = [
-    { name: SCREENS.HOME, url: '/' },
-    { name: SCREENS.ABOUT, url: '/about' },
-    { name: SCREENS.CONTACT, url: '/contact' },
+    { name: SCREENS.HOME, url: '/m6_abpro' },
+    { name: SCREENS.ABOUT, url: '/m6_abpro/about' },
+    { name: SCREENS.CONTACT, url: '/m6_abpro/contact' },
   ];
 
   return (

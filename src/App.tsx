@@ -11,9 +11,9 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Appointment />} />
+        <Route path='/m6_abpro' element={<Home />} />
+        <Route path='/m6_abpro/about' element={<About />} />
+        <Route path='/m6_abpro/contact' element={<Appointment />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
@@ -21,4 +21,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
