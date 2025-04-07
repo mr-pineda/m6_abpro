@@ -43,4 +43,5 @@ export default defineConfig({
       },
     }),
   ],
+  base: '/m6_abpro/',
 });
